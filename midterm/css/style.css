@@ -1,25 +1,25 @@
-
+/* General page styling */
 body {
-    margin: 0;
     background-color: #aad4cf;
-    font-family: Arial, sans-serif;
-    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    margin: 0;
 }
 
+/* Main website container */
 header,
 nav,
 main,
 footer {
-    width: 100%;
     max-width: 788px;
-    box-sizing: border-box;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
+/* Header */
 header {
-    position: relative;
     height: 263px;
+    position: relative;
+    overflow: hidden;
 }
 
 header img {
@@ -33,53 +33,56 @@ header h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin: 0;
     color: white;
     font-size: 48px;
     font-weight: normal;
-    white-space: nowrap;
+    margin: 0;
 }
 
+/* Navigation */
 nav {
     display: flex;
     background-color: #d4e9e7;
-    padding: 15px 0;
+    padding: 20px 0;
 }
 
 nav a {
     flex: 1;
     text-align: center;
     text-decoration: none;
-    color: black;
-    font-size: 20px;
-    text-transform: uppercase;
+    color: #222;
+    font-size: 18px;
+    border-right: 1px solid #222;
 }
 
-nav a:not(:last-child) {
-    border-right: 1px solid #888;
+nav a:last-child {
+    border-right: none;
 }
 
+/* Main content */
 main {
     background-color: #d4e9e7;
-    padding: 8px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 h2 {
     font-size: 26px;
     font-weight: normal;
-    margin: 14px 0 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
 
+/* Article image and text */
 .article-image {
-    float: left;
     width: 192px;
+    float: left;
     margin: 0 15px 10px 0;
 }
 
-article p {
-    font-size: 13px;
-    line-height: 1.3;
-    margin: 0 0 10px;
+article {
+    line-height: 1.4;
+    font-size: 14px;
 }
 
 article::after {
@@ -88,63 +91,78 @@ article::after {
     clear: both;
 }
 
-#facts ul {
-    padding-left: 12px;
-    font-size: 13px;
+/* Starfish facts */
+#facts {
+    margin-top: 25px;
 }
 
+ul {
+    padding-left: 25px;
+    line-height: 1.5;
+}
+
+/* Contact form */
 #contact {
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 form {
-    border: 1px solid #555;
-    padding: 12px;
+    border: 1px solid #222;
+    padding: 15px;
 }
 
 form label {
-    display: inline-block;
-    margin: 12px 0 6px;
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
 }
 
 form input[type="text"],
 form input[type="email"],
 form textarea {
-    display: block;
     width: 100%;
+    padding: 8px;
     box-sizing: border-box;
-    padding: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #888;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 form textarea {
     height: 77px;
+    resize: vertical;
 }
 
-form input[type="radio"] {
-    margin-left: 5px;
+form p {
+    margin-top: 18px;
 }
 
-form input[type="radio"] + label {
+.radio-option {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.radio-option input {
     margin-right: 8px;
 }
 
+.radio-option label {
+    margin: 0;
+}
+
 button {
-    display: block;
-    margin-top: 12px;
-    padding: 8px;
-    background: transparent;
-    border: 1px solid #777;
+    background-color: #d4e9e7;
+    border: 1px solid #222;
+    padding: 10px 18px;
+    margin-top: 15px;
     cursor: pointer;
 }
 
+/* Footer */
 footer {
     background-color: #d4e9e7;
+    padding: 15px 20px;
+    box-sizing: border-box;
     text-align: right;
-    padding: 15px 25px 25px;
-}
-
-footer p {
-    margin: 0;
     font-size: 13px;
 }
